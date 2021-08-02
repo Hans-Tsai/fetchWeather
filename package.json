@@ -1,0 +1,16 @@
+{
+  "name": "noodoe",
+  "version": "1.0.0",
+  "description": "拓連 Noodoe 作業 ---",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "querystring": "^0.2.1",
+    "weather-taiwan": "^1.0.6"
+  }
+}
