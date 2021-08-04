@@ -3,10 +3,10 @@ const querystring = require('querystring');
 
 // GET parameters
 const parameters = {
-	locationName: ['臺北,新屋,板橋'],
-  elementName: ['TEMP', 'HUMD', 'Weather'],
+	locationName: '臺北,新屋,板橋',
+  elementName: 'TEMP, HUMD, Weather',
   parameterName: 'CITY',
-	sort: 'stationId',
+  sort: 'stationId',
 }
 
 // GET parameters as query string : "?id=123&type=post"
