@@ -4,7 +4,8 @@
   "description": "拓連 Noodoe 作業",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
