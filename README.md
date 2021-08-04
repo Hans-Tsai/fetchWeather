@@ -24,6 +24,7 @@
   + 統整: `https://opendata.cwb.gov.tw/api/v1/rest/datastore/O-A0003-001?Authorization=CWB-9E9FDB52-39FB-43B2-AEAF-9518B5B0C20C&locationName=臺北,新屋,板橋&sort=stationId&elementName=TEMP,HUMD,Weather&parameterName=CITY`
 - [局屬氣象站資料集說明檔](https://opendata.cwb.gov.tw/opendatadoc/DIV2/A0003-001.pdf)--- 即時天氣資訊(約每 10 分鐘更新一次)
   + 局屬氣象站的地名通常都是某個城市名稱(例如，臺北、臺中、臺南、花蓮)
+- 部署到 AWS Lambda Function 可參考[使用 ES6+ 語法 Node.js 於 AWS Lambda](https://www.coryma.me/2019/06/19/%E4%BD%BF%E7%94%A8-es6-%E8%AA%9E%E6%B3%95-node-js-%E6%96%BC-aws-lambda/)
 
 ### 範例資料集
 - ```json
