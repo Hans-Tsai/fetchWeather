@@ -2,8 +2,8 @@
 
 // 我的 Authorization Key(Open API 授權金鑰):
 // 台北(中正區) - { stationId: 466920 }
-// 新北(板橋) - { stationId: 467050 }
-// 桃園(新屋) - { stationId: 466880 }
+// 新北(板橋) - { stationId: 466880 }
+// 桃園(新屋) - { stationId: 467050 }
 
 // fetch all weather from DB
 // e.g. `/:apiKey`
