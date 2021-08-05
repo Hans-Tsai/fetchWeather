@@ -1,24 +1,24 @@
 ###
 
-// 我的 Authorization Key(Open API 授權金鑰): CWB-9E9FDB52-39FB-43B2-AEAF-9518B5B0C20C
+// 我的 Authorization Key(Open API 授權金鑰):
 // 台北(中正區) - { stationId: 466920 }
 // 新北(板橋) - { stationId: 467050 }
 // 桃園(新屋) - { stationId: 466880 }
 
 // fetch all weather from DB
 // e.g. `/:apiKey`
-GET http://localhost:3000/fetchWeather/CWB-9E9FDB52-39FB-43B2-AEAF-9518B5B0C20C
+GET http://localhost:3000/fetchWeather/<Your Authorization Key>
 
 ###
 
 // fetch and save all weather data into MongoDB
 // eg. `/fetch/:apiKey`
-GET http://localhost:3000/fetchWeather/fetch/CWB-9E9FDB52-39FB-43B2-AEAF-9518B5B0C20C
+GET http://localhost:3000/fetchWeather/fetch-and-save/<Your Authorization Key>
 
 ###
 
 // fetch a specific city weather data by its stationId
 // e.g. `/:apiKey/:stationId`
-GET http://localhost:3000/fetchWeather/CWB-9E9FDB52-39FB-43B2-AEAF-9518B5B0C20C/466920
+GET http://localhost:3000/fetchWeather/<Your Authorization Key>/466920
 
 ###

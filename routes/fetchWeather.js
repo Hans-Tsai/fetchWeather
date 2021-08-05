@@ -16,7 +16,7 @@ router.get('/:apiKey', checkAuthKey, async (req, res) => {
 });
 
 /** save all weather into MongoDB actively */
-router.get('/fetch/:apiKey', checkAuthKey, fetchAllAndSave, (req, res) => {
+router.get('/fetch-and-save/:apiKey', checkAuthKey, fetchAllAndSave, (req, res) => {
   res.status(200).json({ 'message': 'fetch all weather data and save them into MongoDB successfully.' });
 });
 
@@ -50,7 +50,7 @@ async function checkAuthKey(req, res, next) {
 async function getWeather(req, res, next) {
   let weather;
   try {
-    weather = await Weather.findOne({ stationId: req.params.stationId });
+    weather = await Weather.findOne({ stationId: req.params.stationId }).sort({ observeTime: 'desc' });
     if (weather == null) return res.status(404).json({ message: 'Cannot find weather by this stationId.' });
   } 
   catch (err) {

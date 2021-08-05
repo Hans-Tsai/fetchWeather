@@ -1,26 +1,39 @@
-拓連 Noodoe 作業
----
-
-### 目前我們backend 科技或技術有
-- GraphQL
-- NestJS
-- MySQL
-- Redis
-- Kafka
-- AWS service(ex: lambda)
+交通部 中央氣象局(OCB) 抓取即時氣象資料
+===
 
 ### 以下是作業內容
-請使用任何一種backend 套件(node.js尤佳) ,建立一個backend service, 並且符合底下這幾個需求
+- 請使用任何一種 backend 套件(Node.js尤佳) ,建立一個 backend service, 並且符合底下這幾個需求
 - 每一個小時,此server 去中央氣象局開放資料平臺抓取臺北市,新北市,桃園市即時天氣資訊, 並且存到DB
   + [中央氣象局開放資料平台](https://opendata.cwb.gov.tw/index)
     * 可透過 FB 帳號登入
-- 提供一個API, 讓合法使用者可以查詢這三個城市的天氣資訊, 此天氣資訊直接從DB 讀取
-  + 合法的使用者目前定義是擁有 API key 的使用者.
+- 提供一個 API, 讓合法使用者可以查詢這三個城市的天氣資訊, 此天氣資訊直接從DB 讀取
+  + 合法的使用者目前定義是擁有 API key 的使用者
+
+### 啟動方式說明
+- 安裝相關套件
+  + $ `npm install`
+- 啟動 MongoDB Atlas
+  + cluster name: weather-search-engine
+  + database name: myFirstDatabase
+    * collection name: `apikeys`
+    * collection name: `weathers`
+- 建立 `.env` 檔案
+  + 加入 $ `DATABASE_URL='<mongodb url on Atlas>'`
+- 啟動 Node.js + Express 的 backend server
+  + $ `npm run devStart`
+- 開啟 `route.rest` 檔案，透過 VS code 的 **REST Client** 擴充套件來發送 RESTful API
+  + 到交通部 中央氣象局申請一組用來使用 Open API 的自己的 Authorization Key
+  + fetch all weather from DB
+    * $ `GET http://localhost:3000/fetchWeather/<Your Authorization Key>`
+  + fetch and save all weather data into MongoDB
+    * $ `GET http://localhost:3000/fetchWeather/fetch-and-save/<Your Authorization Key>`
+  + fetch a specific city weather data by its stationId
+    * $ `GET http://localhost:3000/fetchWeather/<Your Authorization Key>/<stationId>`
 
 ### 備註
 - [中央氣象局氣象資料開放平臺 – Open API 資料擷取使用說明](https://opendata.cwb.gov.tw/opendatadoc/CWB_Opendata_API_V1.2.pdf)
   + dataid(資料項編號): **O-A0003-001**
-  + Authorization(Open API 授權金鑰): **CWB-9E9FDB52-39FB-43B2-AEAF-9518B5B0C20C**
+  + Authorization(Open API 授權金鑰):
   + locationName: 臺北,新屋,板橋
   + sort: stationId
   + Weather: 天氣描述(雲量 + 天氣現象)
