@@ -1,7 +1,7 @@
-GET http://localhost:3000/fetchWeather
+GET http://localhost:3000/fetchWeather/CWB-9E9FDB52-39FB-43B2-AEAF-9518B5B0C20C
 
 ###
 
-GET http://localhost:3000/fetchWeather/466920
+GET http://localhost:3000/fetchWeather/CWB-9E9FDB52-39FB-43B2-AEAF-9518B5B0C20C/466920
 
 ###
