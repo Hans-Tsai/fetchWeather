@@ -21,7 +21,7 @@
   + 加入 $ `DATABASE_URL='<mongodb url on Atlas>'`
 - 啟動 Node.js + Express 的 backend server
   + $ `npm run devStart`
-- 開啟 `route.rest` 檔案，透過 VS code 的 **REST Client** 擴充套件來發送 RESTful API
+- 開啟 `route.rest` 檔案，透過 VS code 的 **REST Client** 擴充套件來發送 RESTful API
   + 到交通部 中央氣象局申請一組用來使用 Open API 的自己的 Authorization Key
   + fetch all weather from DB
     * $ `GET http://localhost:3000/fetchWeather/<Your Authorization Key>`
