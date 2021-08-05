@@ -13,8 +13,8 @@
 - 安裝相關套件
   + $ `npm install`
 - 啟動 MongoDB Atlas
-  + cluster name: weather-search-engine
-  + database name: myFirstDatabase
+  + cluster name: `weather-search-engine`
+  + database name: `myFirstDatabase`
     * collection name: `apikeys`
     * collection name: `weathers`
 - 建立 `.env` 檔案
