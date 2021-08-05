@@ -2,7 +2,12 @@
 ---
 
 ### 目前我們backend 科技或技術有
-- GraphQL, NestJS,GraphQL, NestJS, MySQL, Redis, Kafka, AWS service(ex: lambda)
+- GraphQL
+- NestJS
+- MySQL
+- Redis
+- Kafka
+- AWS service(ex: lambda)
 
 ### 以下是作業內容
 請使用任何一種backend 套件(node.js尤佳) ,建立一個backend service, 並且符合底下這幾個需求
