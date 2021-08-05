@@ -19,6 +19,12 @@ GET http://localhost:3000/fetchWeather/fetch-and-save/<Your Authorization Key>
 
 // fetch a specific city weather data by its stationId
 // e.g. `/:apiKey/:stationId`
-GET http://localhost:3000/fetchWeather/<Your Authorization Key>/466920
+GET http://localhost:3000/fetchWeather/<Your Authorization Key>/<stationId>
+
+###
+
+// Delete all documents in the `weathers` collection
+// e.g. `/:apiKey`
+DELETE http://localhost:3000/fetchWeather/<Your Authorization Key>
 
 ###

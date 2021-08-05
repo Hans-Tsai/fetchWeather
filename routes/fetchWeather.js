@@ -25,6 +25,17 @@ router.get('/:apiKey/:stationId', checkAuthKey, getWeather, (req, res) => {
   res.json(res.weather);
 });
 
+/** Delete all documents in the `weathers` collection */
+router.delete('/:apiKey', checkAuthKey, async (req, res) => {
+  try {
+    await Weather.remove();
+    res.json({ 'message': 'Delete all documents in the `weathers` collection' });
+  } 
+  catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
 //#region middleware functions
 /** middleware function
  * @description check the Authorization Key 
