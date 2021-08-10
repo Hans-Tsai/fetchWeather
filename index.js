@@ -15,7 +15,6 @@ mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTo
     .catch(err => console.log(err));
 const db = mongoose.connection;
 
-app.use(express.json());
 app.use('/fetchWeather', fetchWeather);
 
 const serverPort = 3000;
